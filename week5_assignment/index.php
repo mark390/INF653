@@ -1,7 +1,7 @@
 <?php
-    require('database.php');
-    require('todo_db.php');
-    require('category_db.php');
+    require('model/database.php');
+    require('model/todo_db.php');
+    require('model/category_db.php');
 
     $ItemNum = filter_input(INPUT_POST, 'ItemNum', FILTER_VALIDATE_INT);
     $title = filter_input(INPUT_POST, 'Title', FILTER_SANITIZE_STRING);
