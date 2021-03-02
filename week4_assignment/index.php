@@ -42,7 +42,7 @@
     </ul>
 </section>
     <h2>Add Item</h2>
-    <form class="submitform" action="." method=POST>
+    <form class="submitform" action="insert.php" method=POST>
         <label for="item">Item:></label>
         <input type="text" id="item" name="Item" required>
         <label for="itemdesc">Item Description:></label>
