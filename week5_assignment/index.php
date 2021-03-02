@@ -64,7 +64,7 @@
         default:
             $categoryName = get_categoryName($categoryID);
             $categories = get_categories();
-            $todoitems = get_todo_items($categoryID);
+            $todoitems = get_todo_items();
             include('view/list_categories.php');
 
 
