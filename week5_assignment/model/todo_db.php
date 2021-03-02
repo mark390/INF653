@@ -1,10 +1,9 @@
 <?php
 
     function get_todo_items($categoryID) {
-        global $db
+        global $db;
         if ($categoryID) { 
             //READ ITEM FROM DB//
-            global $db;
             $query = 'SELECT T.categoryID T.Description C.categoryName from todoitems T LEFT JOIN
             categories C ON T.categoryID = C.categoryID WHERE T.categoryID = :categoryID ORDER BY T.CategoryID';
         } else {
@@ -12,7 +11,7 @@
             categories C ON T.categoryID = C.categoryID ORDER BY T.CategoryID';
         } 
         $statement = $db->prepare($query);
-        $statement->bindValue(':categoryID', $categoryID);
+        $statement->bindValue(:categoryID, $categoryID);
         $statement->execute();
         $values = $statement->fetchAll();
         $statement->closeCursor();
@@ -29,7 +28,7 @@
     }
 
     function add_todo_items($categoryID, $description, $title) {
-        global $db
+        global $db;
         //ADD TO DB//
         $query = 'INSERT INTO todoitems (categoryID, Description, Title) VALUES (:categoryID, :description, :title)';
         $statement = $db->prepare($query);

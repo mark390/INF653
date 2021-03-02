@@ -16,7 +16,7 @@
     if (!$action) {
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
         if (!$action) {
-            $action = 'list_items'
+            $action = 'list_items';
         }
     }
 
@@ -31,7 +31,7 @@
             break;
         case "add_item":
             if ($categoryID && $description) {
-                add_todo_items($categoryID, $description);
+                add_todo_items($categoryID, $description, $title);
                 header("Location: .?categoryID=$categoryID");
                 include('view/list_items.php');
             } else {
@@ -52,7 +52,7 @@
                 header("Location: .?action=list_categories");
             }
             break;
-        case "delete_todoitems"($ItemNum):
+        case "delete_todo_items":
             if ($ItemNum) {
                 delete_todo_items($ItemNum);
                 header("Location: .?categoryID=$categoryID");
