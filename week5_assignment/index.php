@@ -90,7 +90,7 @@
     <h1>ToDo List</h1>
 <section>
     <ul>
-        <?php foreach ($item as $i) : ?>
+        <?php foreach ($ItemNum as $i) : ?>
             <li>
                 <?php echo $i['Title']; ?>
                 <?php echo $i['Description'] ?>

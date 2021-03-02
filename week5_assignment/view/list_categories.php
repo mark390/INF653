@@ -5,7 +5,7 @@
     <header class="list__row list__header">
     </header>
     
-    <?php foreach ($category as $c) : ?>
+    <?php foreach ($categories as $c) : ?>
     <div class="list__row">
         <p class="bold"><?= $c['categoryName'] ?></p>
     </div>
